@@ -1,1 +1,1 @@
-<h3>The Server Component running on {{server}} server.</h3>
+<h3 [ngClass]="{'online':serverStatus==='Online','offline':serverStatus==='Offline'}">Server is {{serverStatus}}</h3>

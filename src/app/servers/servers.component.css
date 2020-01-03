@@ -3,9 +3,11 @@
 }
 .online{
     background: red;
-    border: 2px solid green;
+    color:white;
+    border: 2px solid black;
 }
 .offline{
     background: green;
-    border: 2px solid red;
+    color:white;
+    border: 2px solid black;
 }

@@ -20,7 +20,7 @@ export class ServersComponent implements OnInit {
     
   }
   getServerStatus(){
-    return this.serverStatus = Math.random()>0.5?"Online":"Offline";
+    return Math.random()>0.5?"Online":"Offline";
   }
   ngOnInit() {
   }
