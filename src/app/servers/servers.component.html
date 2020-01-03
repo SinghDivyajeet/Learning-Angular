@@ -1,12 +1,23 @@
 <app-server></app-server>
 <app-server></app-server>
 <br>
-<input class="form-control form-control-lg" type="text" [(ngModel)]="serverName" (input)="makeNewServer($event)">
+<input class="form-control form-control-lg" type="text" [(ngModel)]="serverName">
 <button class="btn btn-primary" 
     [disabled]="serverName===''"
-    (click)="serverName = ''"> Make new server!</button>
+    (click)="createNewServer()"> Make new server!</button>
 <br>
     {{serverName}} Server Created!!
 <br>
 <p>{{counter}} instances of {{ serverCreationStatus }}</p>
 <br>
+<div *ngFor="let server of allServers">
+    <p>{{server}}</p>
+</div>
+<br>
+<div class="btn btn-primary">Show Details</div> &nbsp;
+<div class="btn btn-primary" (click)="saveClicks()">Show Analytics</div>
+<p>Password:tuna123</p>
+<div>
+    <span [ngClass]="{'makeItArray':j%5===0}" *ngFor="let i of stamps; index as j ">{{i}}, </span>
+</div>
+<p> </p>

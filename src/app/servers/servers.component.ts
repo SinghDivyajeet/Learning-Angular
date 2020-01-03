@@ -13,6 +13,8 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = "Server was Created."
   counter = 0;
   serverStatus = "offline";
+  allServers = [];
+  stamps=[];
   constructor() { 
     if(this.serverName!=""){
       this.allowNewServer=true;
@@ -25,20 +27,12 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
   
-  
-  makeNewServer(event:Event){
-    this.serverName = (<HTMLInputElement>event.target).value;
-    if(this.serverName){
-      this.allowNewServer = true;
-    }
-    else{
-      this.allowNewServer = false;
-    }
-  }
-  CreateNewServer(){
+  createNewServer(){
     this.counter++;
-    alert(`${this.serverName} Created!!`)
+    this.allServers.push(this.serverName);
     this.serverName="";
-    this.allowNewServer = false;
+  }
+  saveClicks(){
+    this.stamps.push(Date.now())
   }
 }
