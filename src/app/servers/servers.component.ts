@@ -15,6 +15,8 @@ export class ServersComponent implements OnInit {
   serverStatus = "offline";
   allServers = [];
   stamps=[];
+  showDetail = false;
+
   constructor() { 
     if(this.serverName!=""){
       this.allowNewServer=true;

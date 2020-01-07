@@ -14,9 +14,9 @@
     <p>{{server}}</p>
 </div>
 <br>
-<div class="btn btn-primary">Show Details</div> &nbsp;
+<div class="btn btn-primary" (click)="showDetails = !showDetails">Show Details</div> &nbsp;
 <div class="btn btn-primary" (click)="saveClicks()">Show Analytics</div>
-<p>Password:tuna123</p>
+<p *ngIf="showDetails">Password:tuna123</p>
 <div>
     <span [ngClass]="{'makeItArray':j%5===0}" *ngFor="let i of stamps; index as j ">{{i}}, </span>
 </div>
